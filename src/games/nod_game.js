@@ -22,5 +22,7 @@ export default function gameNod() {
   }
   if (count === 3) {
     console.log(`Congratulations, ${name}!`);
+  } else {
+    console.log(`Let's try again, ${name}!`);
   }
 }

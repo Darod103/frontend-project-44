@@ -5,6 +5,7 @@ import greetUser from '../cli.js';
 export default function calculateGame() {
   const name = greetUser();
   let count = 0;
+  console.log('What is the result of the expression?');
   while (count < 3) {
     const fitsNumb = getRandomNumber();
     const secondNumb = getRandomNumber();

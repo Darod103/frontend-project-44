@@ -15,11 +15,11 @@ export default function evenGame() {
       console.log('Correct!');
       count += 1;
     } else {
-      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${corentAnwser}"`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${corentAnwser}"\nLet's try again, ${name}!`);
       break;
     }
   }
   if (count === 3) {
-    console.log(`Congratulations, ${name}`);
+    console.log(`Congratulations, ${name}!`);
   }
 }
