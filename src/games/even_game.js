@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, isEven } from './index.js';
-import greetUser from './cli.js';
+import { getRandomNumber, isEven } from '../index.js';
+import greetUser from '../cli.js';
 
 export default function evenGame() {
   let count = 0;

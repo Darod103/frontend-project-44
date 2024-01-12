@@ -1,9 +1,7 @@
-// import readlineSync from 'readline-sync';
-// import greetUser from './cli.js';
 //  Проверка на четность
 const isEven = (a) => a % 2 === 0;
 //  Генератор рандомного числа до 100
-const getRandomNumber = () => Math.floor(Math.random() * 100);
+const getRandomNumber = () => Math.floor(Math.random() * 100 + 1);
 // Рандомный оператор
 const randomOperand = () => {
   const operand = ['*', '-', '+'];
@@ -33,9 +31,28 @@ const nod = (a, b) => {
   }
   return num1;
 };
-// console.log(nod(100, 52));
-export {
-  getRandomNumber, randomOperand, calculate, isEven, nod,
+
+const generateProgressinon = () => {
+  const length = 10; // Фиксируем длину на 10
+  const progression = [];
+  const start = getRandomNumber();
+  const step = Math.floor(Math.random() * 4) + 2;// Генирируем с 2 до 5
+  for (let i = 0; i < length; i += 1) {
+    progression.push(start + i * step);
+  }
+  return progression;
 };
 
-// console.log(nod(25, 29));
+const isPrime = (number) => {
+  if (number < 2) return false;
+  for (let i = 2; i <= Math.sqrt(number); i += 1) {
+    if (number % i === 0) return false;
+  }
+  return true;
+};
+
+export {
+  getRandomNumber, randomOperand,
+  calculate, isEven, nod, generateProgressinon,
+  isPrime,
+};

@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, randomOperand, calculate } from './index.js';
-import greetUser from './cli.js';
+import { getRandomNumber, randomOperand, calculate } from '../index.js';
+import greetUser from '../cli.js';
 
 export default function calculateGame() {
   const name = greetUser();
