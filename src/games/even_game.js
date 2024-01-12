@@ -8,14 +8,14 @@ export default function evenGame() {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   while (count < 3) {
     const randomNumber = getRandomNumber();
-    console.log(`Question:${randomNumber}`);
-    const answer = readlineSync.question('Your answer:');
+    console.log(`Question: ${randomNumber}`);
+    const answer = readlineSync.question('Your answer: ');
     const corentAnwser = isEven(randomNumber) ? 'yes' : 'no';
     if (corentAnwser === answer) {
       console.log('Correct!');
       count += 1;
     } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${corentAnwser}`);
+      console.log(`"${answer}" is wrong answer ;(. Correct answer was "${corentAnwser}"`);
       break;
     }
   }
