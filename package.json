@@ -19,8 +19,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "npx": "^10.2.2",
-    "readline-sync": "^1.4.10"
+      "readline-sync": "^1.4.10"
   },
   "devDependencies": {
     "eslint": "^8.56.0",
