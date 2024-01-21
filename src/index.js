@@ -12,7 +12,7 @@ export default function runGame(gameRuls, round) {
     const userAnswer = readlineSync.question('Youe answer: ');
     if (userAnswer !== correctAnswer) {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${name}`);
+      console.log(`Let's try again, ${name}!`);
       break;
     } else {
       console.log('Correct!');
