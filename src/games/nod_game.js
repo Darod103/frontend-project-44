@@ -1,28 +1,19 @@
-import readlineSync from 'readline-sync';
-import { getRandomNumber, nod } from '../index.js';
-import greetUser from '../cli.js';
+import runGame from '../index.js';
+import getRandomNumber from '../utils.js';
 
-export default function gameNod() {
-  const name = greetUser();
-  let count = 0;
-  console.log('Find the greatest common divisor of given numbers.');
-  while (count < 3) {
-    const firstNumb = getRandomNumber();
-    const secondNumb = getRandomNumber();
-    console.log(`Question: ${firstNumb} ${secondNumb}`);
-    const answer = readlineSync.question('Your answer: ');
-    const coreectAnswer = nod(firstNumb, secondNumb);
-    if (parseInt(coreectAnswer, 10) === parseInt(answer, 10)) {
-      console.log('Correct!');
-      count += 1;
-    } else {
-      console.log(`${answer} is wrong answer ;(. Correct answer was ${coreectAnswer}`);
-      break;
-    }
+const ruls = 'Find the greatest common divisor of given numbers.';
+const getNod = () => {
+  let num1 = getRandomNumber(1, 30);
+  let num2 = getRandomNumber(1, 30);
+  const question = `${num1} ${num2}`;
+  while (num2 !== 0) {
+    const temp = num2;
+    num2 = num1 % num2;
+    num1 = temp;
   }
-  if (count === 3) {
-    console.log(`Congratulations, ${name}!`);
-  } else {
-    console.log(`Let's try again, ${name}!`);
-  }
+  return [question, String(num1)];
+};
+
+export default function runNodGame() {
+  runGame(ruls, getNod);
 }
