@@ -2,7 +2,8 @@
 [![Actions Status](https://github.com/Darod103/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/Darod103/frontend-project-44/actions)   [![Maintainability](https://api.codeclimate.com/v1/badges/a2e70d2aebc741b35702/maintainability)](https://codeclimate.com/github/Darod103/frontend-project-44/maintainability)
 
 # Required:
-![Static Badge](https://img.shields.io/badge/node-_13.2.0-gren)   ![Static Badge](https://img.shields.io/badge/npm-_6.3.0-blue)
+![Static Badge](https://img.shields.io/badge/node-_%3E_13.2.0-gren)
+  ![Static Badge](https://img.shields.io/badge/npm-_%3E_6.3.0-blue)
 
 # Описание:
 «Игры разума» — набор из пяти консольных игр, построенных по принципу популярных мобильных приложений для прокачки мозга. Каждая игра задает вопросы, на которые нужно дать правильные ответы. После трех правильных ответов считается, что игра пройдена. Неправильные ответы завершают игру и предлагают пройти ее заново. Игры:
