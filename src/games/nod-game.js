@@ -1,8 +1,8 @@
 import runGame from '../index.js';
-import getRandomNumber from '../utils.js';
+import { getRandomNumber } from '../utils.js';
 
 const ruls = 'Find the greatest common divisor of given numbers.';
-const getNod = () => {
+const getRound = () => {
   let num1 = getRandomNumber(1, 30);
   let num2 = getRandomNumber(1, 30);
   const question = `${num1} ${num2}`;
@@ -14,6 +14,8 @@ const getNod = () => {
   return [question, String(num1)];
 };
 
-export default function runNodGame() {
-  runGame(ruls, getNod);
-}
+const runNodGame = () => {
+  runGame(ruls, getRound);
+};
+
+export default runNodGame;
