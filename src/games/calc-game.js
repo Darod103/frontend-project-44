@@ -1,10 +1,8 @@
 import runGame from '../index.js';
 import { getRandomNumber, getRandomElement } from '../utils.js';
 
-const gameRuls = 'What is the result of the expression?';
-
+const gameRules = 'What is the result of the expression?';
 const operators = ['*', '-', '+'];
-
 const getCalculate = (num1, num2, operator) => {
   switch (operator) {
     case '+':
@@ -24,10 +22,11 @@ const getRound = () => {
   const operator = getRandomElement(operators);
   const question = `Question: ${num1} ${operator} ${num2}`;
   const correctAnswer = String(getCalculate(num1, num2, operator));
-  return [question, correctAnswer];
+  return [String(question), String(correctAnswer)];
 };
+
 const runCalcGame = () => {
-  runGame(gameRuls, getRound);
+  runGame(gameRules, getRound);
 };
 
 export default runCalcGame;
