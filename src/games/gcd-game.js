@@ -2,17 +2,18 @@ import runGame from '../index.js';
 import { getRandomNumber } from '../utils.js';
 
 const gameRules = 'Find the greatest common divisor of given numbers.';
-const getGcd = (number1, number2) => {
-  let firstNumber = number1;
-  let secondNumber = number2;
 
-  while (secondNumber !== 0) {
-    const temp = secondNumber;
-    secondNumber = firstNumber % secondNumber;
-    firstNumber = temp;
+const getGcd = (firstNumber, secondNumber) => {
+  let a = firstNumber;
+  let b = secondNumber;
+
+  while (b !== 0) {
+    const temp = b;
+    b = a % b;
+    a = temp;
   }
 
-  return Math.abs(firstNumber);
+  return Math.abs(a);
 };
 
 const getRound = () => {
@@ -20,7 +21,7 @@ const getRound = () => {
   const number2 = getRandomNumber(1, 30);
   const question = `${number1} ${number2}`;
   const correctAnswer = getGcd(number1, number2);
-  return [String(question), String(correctAnswer)];
+  return [question, String(correctAnswer)];
 };
 
 const runGcdGame = () => {

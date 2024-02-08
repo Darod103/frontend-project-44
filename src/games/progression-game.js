@@ -2,6 +2,7 @@ import { getRandomNumber, getRandomIndex } from '../utils.js';
 import runGame from '../index.js';
 
 const gameRules = 'What number is missing in the progression';
+
 const getProgression = (start, step, length = 10) => {
   const progression = [];
   for (let i = 0; i < length; i += 1) {
@@ -18,7 +19,7 @@ const getRound = () => {
   const correctAnswer = question[hiddenIndex];
   question[hiddenIndex] = '..';
 
-  return [`${question.join(' ')}`, `${correctAnswer}`];
+  return [question.join(' '), String(correctAnswer)];
 };
 
 const runProgressionGame = () => {
